@@ -42,5 +42,10 @@ public function about()
 <h1><?= $title; ?></h1>
 <p><?= $content; ?></p>
 
+
+4. 🌐 Akses di browser: `http://localhost/Lab11_php_ci/ci4/public/`.
+
 ---
+
+### 🧠 Membuat Contr
 
