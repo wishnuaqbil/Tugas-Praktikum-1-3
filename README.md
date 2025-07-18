@@ -35,3 +35,6 @@ public function about()
         'content' => 'Ini adalah halaman about.'
     ]);
 }
+
+
+**Contoh View (about.php):**
