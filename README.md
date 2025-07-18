@@ -1,4 +1,3 @@
-# Tugas Praktikum 1-3
 # Tugas Praktikum 1–3
 
 **Nama**: Wishnu Aqbil Ramadani  
