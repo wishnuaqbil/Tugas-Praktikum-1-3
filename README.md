@@ -23,7 +23,6 @@
 ### Membuat Controller & View
 Contoh controller:
 ```php
-
 public function about()
 {
     return view('about', [
@@ -31,33 +30,24 @@ public function about()
         'content' => 'Ini adalah halaman about.'
     ]);
 }
-
----
-
-### Contoh view (about.php):
+Contoh view (about.php):
 
 php
 Copy
 Edit
 <h1><?= $title; ?></h1>
 <p><?= $content; ?></p>
-
----
-
-### Layout Template
-### Buat template/header.php dan footer.php, lalu panggil di setiap view menggunakan:
+Layout Template
+Buat template/header.php dan footer.php, lalu panggil di setiap view menggunakan:
 
 php
 Copy
 Edit
 <?= $this->include('template/header'); ?>
 <?= $this->include('template/footer'); ?>
-
----
-
-### Praktikum 2: CRUD (Create, Read, Update, Delete)
-### Tujuan
-### Memahami konsep dasar Model.
+Praktikum 2: CRUD (Create, Read, Update, Delete)
+Tujuan
+Memahami konsep dasar Model.
 
 Membuat sistem CRUD menggunakan CodeIgniter4.
 
@@ -95,3 +85,32 @@ php
 Copy
 Edit
 $routes->get('/artikel/(:any)', 'Artikel::view/$1');
+Praktikum 3: View Layout & View Cell
+Tujuan
+Menggunakan Layout untuk struktur HTML yang konsisten.
+
+Menggunakan View Cell untuk komponen dinamis seperti sidebar/widget.
+
+View Cell Contoh
+Buat app/Views/widget/recent_post.php:
+
+php
+Copy
+Edit
+<ul>
+  <li>Post Terbaru 1</li>
+  <li>Post Terbaru 2</li>
+</ul>
+Panggil di template:
+
+php
+Copy
+Edit
+<?= view_cell('\App\Libraries\Widget::recentPosts') ?>
+📝 Catatan:
+
+Gunakan base_url() untuk semua link atau gambar.
+
+Pastikan Routes.php sudah diatur dengan benar.
+
+Tambahkan validasi dan keamanan sesuai kebutuhan proyek.
