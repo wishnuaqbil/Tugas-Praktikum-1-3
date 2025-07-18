@@ -31,24 +31,32 @@ public function about()
     ]);
 }
 
-Contoh view (about.php):
+---
+
+### Contoh view (about.php):
 
 php
 Copy
 Edit
 <h1><?= $title; ?></h1>
 <p><?= $content; ?></p>
-Layout Template
-Buat template/header.php dan footer.php, lalu panggil di setiap view menggunakan:
+
+---
+
+### Layout Template
+### Buat template/header.php dan footer.php, lalu panggil di setiap view menggunakan:
 
 php
 Copy
 Edit
 <?= $this->include('template/header'); ?>
 <?= $this->include('template/footer'); ?>
-Praktikum 2: CRUD (Create, Read, Update, Delete)
-Tujuan
-Memahami konsep dasar Model.
+
+---
+
+### Praktikum 2: CRUD (Create, Read, Update, Delete)
+### Tujuan
+### Memahami konsep dasar Model.
 
 Membuat sistem CRUD menggunakan CodeIgniter4.
 
