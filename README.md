@@ -23,6 +23,7 @@
 ### Membuat Controller & View
 Contoh controller:
 ```php
+
 public function about()
 {
     return view('about', [
