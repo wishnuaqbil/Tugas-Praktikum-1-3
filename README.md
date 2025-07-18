@@ -36,5 +36,11 @@ public function about()
     ]);
 }
 
+---
 
-**Contoh View (about.php):**
+### Contoh View (about.php):
+<h1><?= $title; ?></h1>
+<p><?= $content; ?></p>
+
+---
+
