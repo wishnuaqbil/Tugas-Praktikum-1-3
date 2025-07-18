@@ -30,3 +30,59 @@ public function about()
         'content' => 'Ini adalah halaman about.'
     ]);
 }
+
+Contoh view (about.php):
+
+php
+Copy
+Edit
+<h1><?= $title; ?></h1>
+<p><?= $content; ?></p>
+Layout Template
+Buat template/header.php dan footer.php, lalu panggil di setiap view menggunakan:
+
+php
+Copy
+Edit
+<?= $this->include('template/header'); ?>
+<?= $this->include('template/footer'); ?>
+Praktikum 2: CRUD (Create, Read, Update, Delete)
+Tujuan
+Memahami konsep dasar Model.
+
+Membuat sistem CRUD menggunakan CodeIgniter4.
+
+Model (ArtikelModel.php)
+php
+Copy
+Edit
+class ArtikelModel extends Model
+{
+    protected $table = 'artikel';
+    protected $allowedFields = ['judul', 'isi', 'slug', 'gambar'];
+}
+Controller (Artikel.php)
+php
+Copy
+Edit
+public function index()
+{
+    $model = new ArtikelModel();
+    $artikel = $model->findAll();
+    return view('artikel/index', compact('artikel'));
+}
+View (index.php)
+php
+Copy
+Edit
+<?php foreach ($artikel as $row): ?>
+  <h2><?= $row['judul']; ?></h2>
+  <p><?= substr($row['isi'], 0, 100); ?></p>
+<?php endforeach; ?>
+Tambahan Routing
+Tambahkan di app/config/Routes.php:
+
+php
+Copy
+Edit
+$routes->get('/artikel/(:any)', 'Artikel::view/$1');
